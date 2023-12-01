@@ -1,0 +1,17 @@
+{
+  "name": "Rick Roll Redirect",
+  "version": "1.0.0",
+  "description": "Randomly redirects you to a Rick Roll video when you try to open YouTube.",
+  "manifest_version": 3,
+  "author": "Pranjal Gupta",
+  "action": {
+    "default_title": "Rick Roll Redirect"
+  },
+  "permissions": ["tabs", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "js": ["redirect.js"],
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ]
+}
